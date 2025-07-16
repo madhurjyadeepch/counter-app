@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Counter App</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+        rel="stylesheet">
+        
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+        <div class="intro">
+            <h1>Simple Counter</h1>
+
+            <div class="paragraph">
+                <p>A simple tool for counting things and keeping track of numbers.</p>
+            </div>  
+            <p class="name">By <a href="https://github.com/madhurjyadeepch" target="_blank">Madhurjya Deep Chakravarty</a></p>
+
+            <div class="proceed">
+                <button class="proceed-button">Proceed</button>
+            </div>
+        </div>
+
+        <div class="main-container hidden">
+            <div class="top-bar">
+
+                <img class="settings" src="assets/settings.svg">
+                <img class="reset" src="assets/restart.svg">
+            </div>
+
+            <div class="main-section">
+                <div class="main-number">
+                    <img id='decrease' src="assets/minus.svg">
+                    <p id="counter-value">0</p>
+                    <img id='increase' src="assets/plus.svg">
+                </div>
+                
+                <div class="bottom-bar">
+                    <p id="remaining" class="remaining"></p>
+                    <p class="available">AVAILABLE</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reset-modal hidden">
+            <div class="reset-box">
+                <h2>RESET</h2>
+                <p>Are you sure you want to reset?</p>
+                <div class="reset-buttons">
+                    <button id="yes">Yes</button>
+                    <button id="no">No</button>
+                </div>
+            </div>
+        </div>
+        <div class="settings-modal hidden">
+            <div class="settings-box">
+                <h2>Settings</h2>
+        
+                <label>
+                    Minimum Value:
+                    <input type="number" id="min-input" value="0">
+                </label>
+        
+                <label>
+                    Maximum Value:
+                    <input type="number" id="max-input" value="10">
+                </label>
+        
+                <div class="checkbox-group">
+                    <input type="checkbox" id="disable-max-checkbox">
+                    <label for="disable-max-checkbox">Disable maximum limit</label>
+                </div>
+        
+                <button id="save-settings">Save</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
