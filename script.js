@@ -64,8 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     decreaseButton.addEventListener('click', () => {
-        count--;
-        updateCounterDisplay();
+        if (count > minLimit) {
+            count--;
+            updateCounterDisplay();
+        }
     });
 
     const settingsButton = document.querySelector('.settings');
